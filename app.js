@@ -817,6 +817,7 @@ function renderRanking() {
                       <div class="rank-number">#${index + 1}</div>
                       <div>
                         <h3>${escapeHtml(getGroupLabel(row.group))}</h3>
+                        <p class="muted small">組員座號：${escapeHtml(formatSeatNumbers(row.group.seat_numbers))}</p>
                         <p class="muted small">完成耗時 ${formatDuration(row.durationSeconds)} · 完成時間 ${formatDateTime(row.completedAt)}</p>
                       </div>
                       <span class="chip ${row.approved ? "ok" : "warn"}">${row.approved ? "老師審核通過" : "暫定名次"}</span>
